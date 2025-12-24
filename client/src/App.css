@@ -1,0 +1,229 @@
+/* GENEL AYARLAR */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* BAŞLIK ALANI */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  color: #2c3e50; /* Koyu Kurumsal Renk */
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* ANA İÇERİK (Alt Alta) */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.map-area { width: 100%; }
+.list-area { width: 100%; }
+
+/* LİSTE BAŞLIĞI */
+.list-area h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #34495e;
+  position: relative;
+}
+
+.list-area h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #e74c3c; /* ANA MARKA RENGİ (Buradan değiştirebilirsin) */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* IZGARA (GRID) SİSTEMİ */
+.branch-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* KART TASARIMI */
+.branch-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.branch-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: #e74c3c;
+}
+
+/* Kart Üstü */
+.card-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+/* Logo Yer Tutucu (Placehold.co kullanacağız veya CSS ile ikon yapacağız) */
+.card-logo-placeholder {
+    width: 45px;
+    height: 45px;
+    background-color: #e74c3c; /* Logo Arka Planı */
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.card-top h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Kart Bilgileri */
+.card-body {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.info-icon {
+    color: #e74c3c;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+.card-body p { margin: 0; }
+
+.phone-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.phone-link:hover { color: #e74c3c; }
+
+/* Butonlar */
+.card-actions { display: flex; gap: 10px; }
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-direction {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn-direction:hover { background-color: #c0392b; }
+
+.btn-call {
+    background-color: #f1f2f6;
+    color: #2f3542;
+}
+.btn-call:hover { background-color: #dfe4ea; }
+
+.btn-delete {
+    background-color: #2f3542;
+    color: white;
+    flex: 0.4;
+    font-size: 0.8rem;
+}
+.btn-delete:hover { background-color: #000; }
+
+/* Yükleme ve Uyarılar */
+.loading, .alert {
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    color: #7f8c8d;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+/* ADMIN PANELİ */
+.admin-form { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 12px; 
+    margin-bottom: 40px; 
+    border-left: 5px solid #e74c3c; /* Sol şerit */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
+.admin-form h4 { margin-top: 0; color: #2c3e50; font-size: 1.3rem; margin-bottom: 20px;}
+.admin-form input { 
+    width: 100%; 
+    padding: 14px; 
+    margin-bottom: 15px; 
+    border: 1px solid #dfe6e9; 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+    background-color: #fcfcfc;
+}
+.save-btn { 
+    width: 100%; 
+    background: #27ae60; 
+    color: white; 
+    padding: 14px; 
+    font-size: 1rem;
+}
+.save-btn:hover { background: #219150; }

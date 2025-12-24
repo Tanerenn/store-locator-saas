@@ -1,0 +1,23 @@
+{
+  "name": "store-locator-saas",
+  "version": "1.0.0",
+  "description": "Store Locator & Branch Management System (SaaS)",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "express",
+    "maps",
+    "saas"
+  ],
+  "author": "Senin Adın",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
