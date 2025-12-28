@@ -94,7 +94,7 @@ function MainPage({ adminModu }) {
                 <li key={sube.id} className="branch-item">
                   
                   <div className="card-top">
-                      {/* CSS ile oluşturulmuş basit bir logo ikonu */}
+                      
                       <div className="card-logo-placeholder">
                         🏢
                       </div> 
